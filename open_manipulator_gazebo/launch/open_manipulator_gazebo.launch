@@ -25,5 +25,6 @@
      args="-urdf -model open_manipulator -z 0.0 -param robot_description"/>
 
   <!-- ros_control robotis manipulator launch file -->
+  <rosparam file="$(find open_manipulator_gazebo)/config/gazebo_controller.yaml" command="load" />
   <include file="$(find open_manipulator_gazebo)/launch/open_manipulator_controller.launch"/>
 </launch>
